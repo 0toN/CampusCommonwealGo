@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="cn.edu.tsu.campuscommonwealgo.activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <RadioButton
+            android:id="@+id/rbHome"
+            style="@style/tab_tag_style"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_tab_home_selector"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rbCommonweal"
+            style="@style/tab_tag_style"
+            android:drawableTop="@drawable/ic_tab_commonweal_selector"
+            android:text="公益" />
+
+        <RadioButton
+            android:id="@+id/rbMine"
+            style="@style/tab_tag_style"
+            android:drawableTop="@drawable/ic_tab_mine_selector"
+            android:text="我的" />
+    </RadioGroup>
+</LinearLayout>

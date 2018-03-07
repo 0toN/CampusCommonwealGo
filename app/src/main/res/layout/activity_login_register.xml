@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.edu.tsu.campuscommonwealgo.activity.LoginRegisterActivity">
+
+    <cn.edu.tsu.campuscommonwealgo.activity.view.CustomVideoView
+        android:id="@+id/videoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp">
+
+        <EditText
+            android:id="@+id/et_login_username"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/login_register_edt_bg_shape"
+            android:hint="手机号"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@drawable/login_register_cursor_color_shape"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/et_login_passwd"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_register_edt_bg_shape"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@drawable/login_register_cursor_color_shape"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_login_username" />
+
+        <CheckBox
+            android:id="@+id/cb_login_show_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/checkbox_password_selector"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@id/et_login_passwd"
+            app:layout_constraintRight_toRightOf="@id/et_login_passwd"
+            app:layout_constraintTop_toTopOf="@id/et_login_passwd" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_register_reset_btn_unable_bg_shape"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_login_passwd" />
+
+        <View
+            android:id="@+id/login_line"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_login" />
+
+        <TextView
+            android:id="@+id/tv_login_to_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="27dp"
+            android:text="忘记密码"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="@id/login_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_login" />
+
+        <TextView
+            android:id="@+id/tv_login_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="27dp"
+            android:text="注册账号"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/login_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_login" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_register_username"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/login_register_edt_bg_shape"
+            android:hint="手机号"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@drawable/login_register_cursor_color_shape"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/et_register_passwd"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_register_edt_bg_shape"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@drawable/login_register_cursor_color_shape"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_register_username" />
+
+        <CheckBox
+            android:id="@+id/cb_register_show_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/checkbox_password_selector"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@id/et_register_passwd"
+            app:layout_constraintRight_toRightOf="@id/et_register_passwd"
+            app:layout_constraintTop_toTopOf="@id/et_register_passwd" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_register_reset_btn_unable_bg_shape"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_register_passwd" />
+
+        <View
+            android:id="@+id/register_line"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_register" />
+
+        <TextView
+            android:id="@+id/tv_register_to_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="27dp"
+            android:text="忘记密码"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="@id/register_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_register" />
+
+        <TextView
+            android:id="@+id/tv_register_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="27dp"
+            android:text="登录账号"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/register_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_register" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/reset_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_reset_username"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/login_register_edt_bg_shape"
+            android:hint="手机号"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@drawable/login_register_cursor_color_shape"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/et_original_passwd"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_register_edt_bg_shape"
+            android:hint="原密码"
+            android:inputType="text"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@drawable/login_register_cursor_color_shape"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_reset_username" />
+
+        <EditText
+            android:id="@+id/et_new_passwd"
+            style="?android:attr/textViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_register_edt_bg_shape"
+            android:hint="新密码"
+            android:inputType="textPassword"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#AAAAAA"
+            android:textCursorDrawable="@drawable/login_register_cursor_color_shape"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_original_passwd" />
+
+        <CheckBox
+            android:id="@+id/cb_reset_show_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/checkbox_password_selector"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="@id/et_new_passwd"
+            app:layout_constraintRight_toRightOf="@id/et_new_passwd"
+            app:layout_constraintTop_toTopOf="@id/et_new_passwd" />
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_register_reset_btn_unable_bg_shape"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_new_passwd" />
+
+        <View
+            android:id="@+id/reset_line"
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_reset" />
+
+        <TextView
+            android:id="@+id/tv_reset_to_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="27dp"
+            android:text="注册账号"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="@id/reset_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_reset" />
+
+        <TextView
+            android:id="@+id/tv_reset_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="27dp"
+            android:text="登录账号"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/reset_line"
+            app:layout_constraintTop_toBottomOf="@id/tv_reset" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="470dp"
+        android:paddingBottom="35dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="66dp"
+            android:text="第三方登录"
+            android:textColor="#DEDEDE"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="75dp"
+            android:background="#DEDEDE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="75dp"
+            android:background="#DEDEDE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_register_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/register_qq_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_register_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/register_wechat_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_register_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/register_weibo_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</merge>
