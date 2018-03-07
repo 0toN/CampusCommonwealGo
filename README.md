@@ -1,0 +1,4 @@
+# CampusCommonwealGo
+一款公益类型的APP模板软件。使用ConstraintLayout编写界面；注册登录页动态背景的实现；第三方登录(QQ)；密码MD5加密存储和传输；
+使用依赖注入框架ButterKnife实现View的绑定和点击事件的处理；使用ORM框架greenDAO管理本地SQLite数据库 ；LeakCanary内存泄漏检测及处理；
+沉浸式状态栏实现；多分辨率的适配。
